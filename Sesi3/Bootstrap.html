@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Fawziul Sayed</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS untuk Portofolio */
+
+:root {
+    --primary-color: blue; /* Warna kuning Bootstrap 'warning' */
+    --secondary-color: #343a40; /* Dark color */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--secondary-color);
+}
+
+/* Navigasi */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.download-cv-btn {
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 8px 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Interaksi: Efek Hover pada Tombol Download CV */
+.download-cv-btn:hover {
+    background-color: rgb(0, 94, 255)an; /* Sedikit lebih gelap */
+    transform: translateY(-2px); /* Naik sedikit */
+}
+
+
+/* Bagian Hero */
+.web-developer-title {
+    color: #495057; /* Warna abu-abu gelap untuk judul utama */
+    line-height: 1.2;
+}
+
+.profile-image-container {
+    width: 300px; /* Sesuaikan ukuran */
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    /* Membuat lingkaran oranye di sekitar gambar */
+    border: 10px solid cyan; 
+    box-shadow: 0 0 0 10px var(--primary-color);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hire-me-btn {
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Interaksi: Efek Hover pada Tombol Hire Me */
+.hire-me-btn:hover {
+    background-color: rgb(0, 94, 255);
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+.social-icons a {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color); /* Ubah warna saat hover */
+}
+
+/* Bagian About Me */
+.max-width-p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-item .icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: cyan; /* Light yellow background */
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Bagian Projects */
+.project-filter-btn {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-filter-btn.active,
+.project-filter-btn:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.project-card {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Interaksi: Efek Hover pada Kartu Proyek */
+.project-card:hover {
+    transform: translateY(-5px); /* Naik sedikit */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important; /* Bayangan lebih jelas */
+}
+
+.project-card img {
+    transition: transform 0.5s;
+}
+
+/* Interaksi: Efek Zoom Gambar saat Hover pada Kartu Proyek */
+.project-card:hover img {
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container py-2">
+            <a class="navbar-brand fw-bold" href="#">DAFAGT<span class="text-primary">M</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+               <a href="#" class="btn btn-primary download-cv-btn">Download CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="py-5">
+        <div class="container pt-5">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p class="mb-1">Hi, I'm</p>
+                    <h1 class="display-4 fw-bold">Dafa Gautama</h1>
+                    <h2 class="display-3 fw-bold mb-4 web-developer-title">Web Developer</h2>
+                    <p class="lead text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique amet enim non nisl cursus pretium. Turpis tempus pharetra.</p>
+                    <a href="#" class="btn btn-primary hire-me-btn px-4 py-2">Hire Me</a>
+                </div>
+                <div class="col-md-5 text-center mt-4 mt-md-0">
+                    <div class="profile-image-container">
+                        <img src="gambar/WhatsApp Image 2025-11-08 at 08.16.45_5b14f35d.jpg" class="img-fluid profile-image" alt="Fawziul Sayed">
+                    </div>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <hr class="my-5">
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">About Me</h2>
+            <p class="text-center mb-5 text-muted max-width-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae massa sed massa nibh iaculis. Natus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+            
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="about-item p-3">
+                        <div class="icon-circle mb-3"><i class="fa-solid fa-user"></i></div>
+                        <h5 class="fw-bold">Full Name</h5>
+                        <p>Dafa Gautama</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-item p-3">
+                        <div class="icon-circle mb-3"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h5 class="fw-bold">Education</h5>
+                        <p>Universitas Bina Nusantara</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-item p-3">
+                        <div class="icon-circle mb-3"><i class="fa-solid fa-briefcase"></i></div>
+                        <h5 class="fw-bold">Pekerjaan</h5>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-item p-3">
+                        <div class="icon-circle mb-3"><i class="fa-solid fa-phone"></i></div>
+                        <h5 class="fw-bold">Contact</h5>
+                        <p>johan.doe@example.com <br> +62 821xxxxxx651</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-item p-3">
+                        <div class="icon-circle mb-3"><i class="fa-solid fa-star"></i></div>
+                        <h5 class="fw-bold">Hobi</h5>
+                        <p>Membaca Buku, Coding, Traveling</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-item p-3">
+                        <div class="icon-circle mb-3"><i class="fa-solid fa-location-dot"></i></div>
+                        <h5 class="fw-bold">Alamat</h5>
+                        <p>Jl. Marthadinata</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">My Projects</h2>
+            <p class="text-center mb-5 text-muted max-width-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam molestie quam mauris est risus lectus. Phasellus consequat urna tellus.</p>
+            
+            <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active project-filter-btn" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link project-filter-btn" id="pills-uiux-tab" data-bs-toggle="pill" data-bs-target="#pills-uiux" type="button" role="tab">UI/UX</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link project-filter-btn" id="pills-web-tab" data-bs-toggle="pill" data-bs-target="#pills-web" type="button" role="tab">Web Design</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link project-filter-btn" id="pills-app-tab" data-bs-toggle="pill" data-bs-target="#pills-app" type="button" role="tab">App Design</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link project-filter-btn" id="pills-graphic-tab" data-bs-toggle="pill" data-bs-target="#pills-graphic" type="button" role="tab">Graphic Design</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" tabindex="0">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card project-card shadow-sm border-0">
+                                <img src="gambar/placeholder.png" class="card-img-top" alt="AirCalling Landing Page Design">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-1">AirCalling Landing Page Design</h5>
+                                    <p class="card-text text-muted small">Web Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card project-card shadow-sm border-0">
+                                <img src="gambar/placeholder.png" class="card-img-top" alt="Business Landing Page Design">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-1">Business Landing Page Design</h5>
+                                    <p class="card-text text-muted small">Web Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card project-card shadow-sm border-0">
+                                <img src="gambar/placeholder.png" class="card-img-top" alt="Ecom Web Page Design">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title mb-1">Ecom Web Page Design</h5>
+                                    <p class="card-text text-muted small">Web Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
