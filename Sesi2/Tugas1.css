@@ -1,0 +1,128 @@
+body {
+    background-color: #f2f2f2;
+}
+
+/* ===== SECTION MENU ===== */
+#menu {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    background-color: rgb(0, 102, 204); 
+    padding: 10px 20px;
+}
+
+/* Brand (item pertama) */
+#menu a:first-child {
+    margin-right: auto;   
+    font-weight: bold;
+}
+
+/* Menu kanan (Header, Biodata, Portfolio) */
+#menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;   
+    font-size: 16px;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+/* ===== SECTION 2 ===== */
+.section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Kolom kiri: judul, paragraf, tombol */
+.section2 .left {
+    width: 50%;
+    text-align: center;      
+}
+
+.section2 {
+    background-color: white;
+}
+
+/* Kolom kanan: gambar */
+.section2 .right {
+    width: 50%;
+    text-align: center;
+}
+
+/* Styling Tombol */
+.section2 .left button {
+    background-color: rgb(0, 102, 204);  /* biru */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.section2 .left button:hover {
+    background-color: rgb(0, 80, 170);   /* warna sedikit lebih gelap */
+}
+
+.section2 .right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start;    
+    padding-right: 20px;        
+    padding-top: 0;             
+}
+
+/* ===== SECTION 3 ===== */
+.biodata-grid {
+    background-color: white;
+}
+
+.biodata {
+    background-color: white;
+}
+
+.biodata-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;                           
+    padding: 20px;
+}
+
+.biodata-grid div {
+    background-color: #e0e0e0;            
+    padding: 20px;
+    border-radius: 8px;                    
+    text-align: center;                    
+    font-size: 16px;
+}
+
+#biodata {
+    color: rgb(0, 102, 204);
+    font-weight: 1000;
+}
+
+#portfolio-title {
+    color: rgb(0, 102, 204); /* biru */
+    text-align: center;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;   
+    gap: 20px;                 
+    padding: 20px 0;
+}
+
+.portfolio-item {
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 400px;
+    border-radius: 6px;       
+}
